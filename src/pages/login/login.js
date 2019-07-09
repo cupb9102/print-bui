@@ -8,7 +8,7 @@
 loader.define(function (require, exports, module) {
 
     console.log('login start')
-    var password = 'default';
+    // var password = 'default';
 
     /*
         // 绑定按钮跳转
@@ -21,6 +21,7 @@ loader.define(function (require, exports, module) {
     */
 
     // 绑定当前页面下样式为 btn 的事件
+    /*
     router.$(".bui-page").on("click", "#btnGo", function (e) {
         // console.log('登录跳转' + JSON.stringify(password))
         console.log(password)
@@ -28,6 +29,75 @@ loader.define(function (require, exports, module) {
         console.log("密码是"+$("#password").val())
         router.load({ url: "pages/main/main.html", param: { id: "page1" } });
     })
+*/
+
+    //登录的数据模型
+    var bs = bui.store({
+        scope: "page",
+        data: {
+            username: "",
+            password: ""
+        },
+        methods: {
+            login: function () {
+                console.log('用户输入的用户名:' + this.username + '\t密码:' + this.password)
+                console.log("登录是否可点击" + this.disabled)
+
+                if (this.disabled) {
+                    bui.hint("请输入用户名和密码");
+                }
+                else {
+                    // post
+                    var uiAjax2 = bui.ajax({
+                        url: "https://cupb.top:8443/PrintDownloadServlet",
+                        data: {
+                            shopid: this.username
+                        },
+                        // 可选参数
+                        method: "POST"
+                    });
+                    //ajax访问网络
+                    uiAjax2.then(function (res) {
+                        bui.hint("登录成功");
+                        console.log('success,back value below')
+                        console.log(res)
+                        // bui.load({ url: "pages/main/main.html", param: { id: "loginPage" } });
+                        //back to  main
+                        bui.back();
+                    }, function (res) {
+                        bui.hint("登录失败");
+                        console.log('failure')
+                        console.log(res)
+                    })
+
+                }
+            }
+        },
+        watch: {},
+        computed: {
+            disabled: function () {
+                // 注意: 这里需要先缓存下来值再进行判断.
+                var firstName = this.username,
+                    lastName = this.password;
+                // console.log(firstName + lastName)
+                if (firstName && lastName) {
+                    // console.log("登录输入框不为空")
+                    return false;
+                } else {
+                    // console.log("登录输入框为空")
+                    return true;
+                }
+            }
+        },
+        templates: {},
+        beforeMount: function () {
+            // 数据解析前执行
+        },
+        mounted: function () {
+            // 数据解析后执行
+        }
+    })
+
 
 
     // 原生事件初始化
@@ -54,7 +124,7 @@ loader.define(function (require, exports, module) {
         })
 
         // 密码显示或者隐藏
-        password = bui.input({
+        var password = bui.input({
             id: ".password-input",
             iconClass: ".icon-eye",
             onBlur: function (e) {

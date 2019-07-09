@@ -14,7 +14,7 @@
                 <label class="bui-label" for="username">用户名:</label>
                 <div class="span1">
                     <div class="bui-input user-input">
-                        <input id="username" type="text" value="" placeholder="请输入用户名">
+                        <input id="username" type="text" value="" b-model="page.username" placeholder="请输入用户名">
                     </div>
                 </div>
             </li>
@@ -22,23 +22,23 @@
                 <label class="bui-label" for="phonenumber">手机号:</label>
                 <div class="span1">
                     <div class="bui-input user-input">
-                        <input id="phonenumber" type="number" value="" placeholder="请输入手机号，登录用">
+                        <input id="phonenumber" type="number" b-model="page.tel" value="" placeholder="请输入手机号，登录用">
                     </div>
                 </div>
             </li>
             <li class="bui-btn bui-box clearactive">
                 <label class="bui-label" for="password">密码:</label>
                 <div class="span1">
-                    <div id="passwordInput" class="bui-input">
-                        <input id="password" type="password" placeholder="请输入密码">
+                    <div id="passwordInput" class="passwordInput bui-input">
+                        <input id="password" type="password" b-model="page.password" placeholder="请输入密码">
                     </div>
                 </div>
             </li>
             <li class="bui-btn bui-box clearactive">
                 <label class="bui-label" for="password">密码:</label>
                 <div class="span1">
-                    <div id="passwordInput2" class="bui-input">
-                        <input id="password2" type="password" placeholder="请再次输入密码">
+                    <div id="passwordInput2" class="passwordInput bui-input">
+                        <input id="password2" type="password" b-model="page.password2" placeholder="请再次输入密码">
                     </div>
                 </div>
             </li>
@@ -46,14 +46,14 @@
                 <label class="bui-label" for="address">地址:</label>
                 <div class="span1">
                     <div class="bui-input user-input">
-                        <input id="address" type="text" value="" placeholder="哪栋，哪号楼，哪个寝室号">
+                        <input id="address" type="text" value="" b-model="page.address" placeholder="哪栋，哪号楼，哪个寝室号">
                     </div>
                 </div>
             </li>
   
         </ul>
         <div class="container-xy">
-            <div id='register-btn' class="bui-btn round primary">注册</div>
+            <div id='register-btn' class="bui-btn round primary" b-class="page.disabled" b-click="page.register">注册</div>
         </div>
     </main>
 
