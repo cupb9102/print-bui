@@ -59,8 +59,15 @@ loader.define(function (require, exports, module) {
                     //ajax访问网络
                     uiAjax2.then(function (res) {
                         bui.hint("登录成功");
+                        // bui.hint({ appendTo:"#main", content:"<i class='icon-infofill'></i>欢迎使用简印", position:"top" , skin:'success', showClose:true, autoClose: true});
+
                         console.log('success,back value below')
                         console.log(res)
+                        var userInfo = window.userInfo
+                        console.log(userInfo)
+                        console.log(userInfo.login)
+                        userInfo.login=true;//登录成功修改登录标记
+
                         // bui.load({ url: "pages/main/main.html", param: { id: "loginPage" } });
                         //back to  main
                         bui.back();
@@ -130,7 +137,7 @@ loader.define(function (require, exports, module) {
             onBlur: function (e) {
                 if (e.target.value == '') { return false; }
                 // 注册的时候校验只能4-18位密码
-                var rule = /^[a-zA-Z0-9_-]{4,18}$/;
+                var rule = /^[a-zA-Z0-9_,.!@#$%^&*()-]{4,18}$/;
                 if (!rule.test(e.target.value)) {
                     bui.hint("密码只能由4-18位字母或者数字上下横杠组成");
                     return false;

@@ -1,0 +1,85 @@
+<style type="text/css">
+    .personal-info {
+        margin-top: 0;
+        margin-bottom: .2rem;
+    }
+
+    .personal-info .bui-btn {
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+    }
+
+    .personal-info .icon {
+        margin-right: 0;
+    }
+
+    .contact-list {
+        border-top: none;
+        margin-bottom: .2rem;
+        padding: 0 0.2rem;
+        background-color: #ffffff;
+    }
+
+    .contact-list .bui-btn {
+        padding-left: 0;
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+    }
+
+    .contact-list li:last-child {
+        border-bottom: none;
+    }
+</style>
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">个人信息</div>
+            <div class="bui-bar-right">
+            </div>
+        </div>
+    </header>
+    <main>
+        <ul class="bui-list personal-info">
+            <li class="bui-btn bui-box">
+                <div class="thumbnail ring"><img src="images/face.jpg" alt=""></div>
+                <div class="span1">
+                    <h3 class="item-title">华师</h3>
+                    <p class="item-text">华东师大艺术学院</p>
+                </div>
+                <input type="checkbox" class="bui-fav warning" value="">
+            </li>
+        </ul>
+        <ul class="bui-list contact-list">
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">性别</label>
+                <div class="span1">
+                    <div class="bui-value">女</div>
+                </div>
+            </li>
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">邮箱</label>
+                <div class="span1">
+                    <div class="bui-value">wangxx@ecnu.edu.cn</div>
+                </div>
+            </li>
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">电话</label>
+                <div class="span1">
+                    <div class="bui-value">13800138000</div>
+                </div>
+            </li>
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">地址</label>
+                <div class="span1">
+                    <div class="bui-value">本科生21号楼520室</div>
+                </div>
+            </li>
+        </ul>
+        <div class="container-xy">
+            <div class="bui-btn round primary">去打印</div>
+        </div>
+    </main>
+</div>
