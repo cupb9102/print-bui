@@ -12,13 +12,16 @@ loader.define(function (require, exports, module) {
             logout: function () {
                 console.log("点击了退出")
                 bui.confirm({
-                    content: "确定会删除信息,不可还原",
-                    title: "修改了标题",
+                    content: "确定注销登录？",
+                    title: "注销登录",
                     buttons: ["取消", "确定"],
                     callback: function (e) {
                         var text = $(e.target).text();
                         if (text == "确定") {
                             // do something
+                            bui.load({
+                                url: "pages/login/login.html"
+                            })
                         }
                         this.close();
                     }

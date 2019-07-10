@@ -65,14 +65,14 @@ loader.define(function (require, exports, module) {
                         console.log(res)
                         var userInfo = window.userInfo
                         console.log(userInfo)
-                        console.log(userInfo.login)
+                        // console.log(userInfo.login)
                         userInfo.login=true;//登录成功修改登录标记
 
                         // bui.load({ url: "pages/main/main.html", param: { id: "loginPage" } });
                         //back to  main
                         bui.back();
                     }, function (res) {
-                        bui.hint("登录失败");
+                        bui.hint("网络不通");
                         console.log('failure')
                         console.log(res)
                     })

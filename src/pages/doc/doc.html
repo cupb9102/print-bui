@@ -1,0 +1,133 @@
+<style>
+    .page-form .bui-fluid-space-3 .span1 {
+      margin-bottom: .2rem;
+    }
+    .selected-val {
+      margin-right: .1rem;
+    }
+  </style>
+  <div class="bui-page page-form">
+    <header class="bui-bar">
+      <div class="bui-bar-left"> <a class="bui-btn btn-back"><i class="icon-back"></i></a> </div>
+      <div class="bui-bar-main">文件详细信息</div>
+      <div class="bui-bar-right"> </div>
+    </header>
+    <main>
+      <h3 class="section-title">文件信息</h3>
+      <div class="bui-list">
+        <label class="bui-btn bui-box">
+          <div class="bui-label">文件名</div>
+          <div class="span1">
+            <div class="bui-value">大学语文课件.ppt</div>
+          </div>
+        </label>
+        <label class="bui-btn bui-box">
+          <div class="bui-label">页数</div>
+          <div class="span1">
+            <div class="bui-value">64</div>
+          </div>
+        </label>
+        <label class="bui-btn bui-box">
+          <div class="bui-label">文件类型</div>
+          <div class="span1">
+            <div class="bui-value">ppt</div>
+          </div>
+        </label>
+        <label class="bui-btn bui-box">
+          <div class="bui-label">合成否</div>
+          <div class="span1">
+            <div class="bui-value">是</div>
+          </div>
+        </label>
+
+      </div>
+    
+   
+      <h3 class="section-title">打印数量</h3>
+      <ul class="bui-list">
+     
+        <li class="bui-btn bui-box clearactive">
+          <label class="bui-label">选择数量:</label>
+          <div class="span1"></div>
+          <div class="bui-value">
+            <div id="uiNumber" class="bui-number"></div>
+          </div>
+        </li>
+   </ul>
+ 
+      <h3 class="section-title">单双面选择<span id="selectList4-value"></span></h3>
+      <ul id="selectList4" class="bui-list">
+        <li class="bui-btn bui-box">
+          <label class="bui-label">单面</label>
+          <div class="span1"></div>
+          <div class="bui-value">
+            <input type="radio" class="bui-radio" name="sex2" value="man" text="男"> </div>
+        </li>
+        <li class="bui-btn bui-box">
+          <label class="bui-label">双面</label>
+          <div class="span1"></div>
+          <div class="bui-value">
+            <input type="radio" class="bui-radio" name="sex2" value="woman" text="女"> </div>
+        </li>
+      </ul>
+      <h3 class="section-title">多合一选择<span id="selectList4-value"></span></h3>
+      <ul id="selectList4" class="bui-list">
+        <li class="bui-btn bui-box">
+          <label class="bui-label">一页一面</label>
+          <div class="span1"></div>
+          <div class="bui-value">
+            <input type="radio" class="bui-radio" name="sex2" value="man" text="男"> </div>
+        </li>
+        <li class="bui-btn bui-box">
+          <label class="bui-label">一页四面</label>
+          <div class="span1"></div>
+          <div class="bui-value">
+            <input type="radio" class="bui-radio" name="sex2" value="woman" text="女"> </div>
+        </li>
+        <li class="bui-btn bui-box">
+            <label class="bui-label">一页六面</label>
+            <div class="span1"></div>
+            <div class="bui-value">
+              <input type="radio" class="bui-radio" name="sex2" value="woman" text="女"> </div>
+          </li>
+      </ul>
+  
+      <h3 class="section-title">附加服务</h3>
+      <ul id="selectLine" class="bui-list">
+        <li class="bui-btn bui-box">
+          <label class="bui-label">装订</label>
+          <div class="span1"></div>
+          <div class="bui-value">
+            <input type="checkbox" class="bui-switch-text" value="1" uncheck="否" check="是" checked="checked"> </div>
+        </li>
+        <li class="bui-btn bui-box">
+          <label class="bui-label">装订</label>
+          <div class="span1"></div>
+          <div class="bui-value">
+            <input type="checkbox" class="bui-switch" value="1" checked="checked"> </div>
+        </li>
+
+      </ul>
+      <h3 class="section-title">备注</h3>
+      <ul class="bui-list">
+        <li class="bui-btn clearactive">
+          <div id="commentContent" class="bui-input">
+            <textarea class="bui-input" id="" cols="30" rows="4" placeholder="请输入内容"></textarea>
+          </div>
+        </li>
+      </ul>
+   
+      <div class="container-y">
+        <div class="bui-box-space">
+          <div class="span1">
+            <div class="bui-btn round">返回</div>
+          </div>
+          <div class="span1">
+            <div class="bui-btn round primary">保存</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  
+  </div>
+  

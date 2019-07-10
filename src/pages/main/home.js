@@ -48,7 +48,7 @@ loader.define(function(require, exports, module) {
                         break;
                 }
 
-                html += `<li class="bui-btn bui-box" href="pages/ui/article.html" param='${paramStr}'>
+                html += `<li class="bui-btn bui-box" href="pages/shop/shop.html" param='${paramStr}'>
                     <div class="bui-thumbnail ${subClass}" data-sub="${sub}" ><img src="${el.image}" alt=""></div>
                     <div class="span1">
                         <h3 class="item-title">${el.name}</h3>
